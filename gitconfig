@@ -1,0 +1,16 @@
+[user]
+        name = mk10969
+        email = mk10969@gmail.com
+[core]
+        autocrlf = false
+        ignorecase = false
+        editor = vim
+        excludesfile=~/.gitignore_global
+[color]
+        ui = true
+[ghq]
+        root = ~/ghq
+[pull]
+        rebase = false
+[url "git@github.com:"]
+        insteadOf = https://github.com/
