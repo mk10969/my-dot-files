@@ -53,6 +53,8 @@ if [ -e $HOME/.config/fish/config.fish ] ; then
 fi
 ln -sf $pwd/.config/fish/config.fish $HOME/.config/fish/config.fish
 
+ln -sfn $pwd/.scripts $HOME/.scripts
+
 
 # install other packages
 echo "=================================================="
