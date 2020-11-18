@@ -1,5 +1,9 @@
-# dotfiles
+# my-dot-files
 
--   brew install
+1. xcode install
 
--   git clone
+2. brew packages install
+
+3. create symlink
+
+4. other packages install
