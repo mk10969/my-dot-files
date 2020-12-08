@@ -1,6 +1,7 @@
 
 ### env path
-
+set -x GOPATH $HOME/go
+set -x PATH $PATH $GOPATH/bin
 
 ### alias
 alias ll='exa -al'
