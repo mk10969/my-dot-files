@@ -43,5 +43,5 @@ alias lta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less
 # end
 
 ### initialize
-eval (anyenv init - | source)
-eval (direnv hook fish | source)
+anyenv init - fish | source
+direnv hook fish | source
