@@ -3,14 +3,15 @@
 
 # homebrew
 set -x PATH /opt/homebrew/bin $PATH
-# arm64 golang
-set -x PATH $HOME/sdk/gotip/bin/darwin_arm64 $PATH
-set -x GOPATH $HOME/go
+# arm64 golang (自前build)
+set -x PATH $HOME/.packages/go-darwin-arm64-bootstrap/bin $PATH
+set -x GOPATH $HOME/.go
 set -x PATH $GOPATH/bin $PATH
+# gradle
+set -x PATH /opt/gradle/bin $PATH
 
 
 ### alias
-alias ls='exa'
 alias ll='exa -aal --git'
 alias lt='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
 alias lta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
