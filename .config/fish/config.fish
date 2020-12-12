@@ -19,7 +19,7 @@ alias lta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less
 
 
 # ### theme
-# starship init fish | source
+starship init fish | source
 
 
 # ### function
