@@ -20,10 +20,10 @@ ln -sf $pwd/gitignore_global $HOME/.gitignore_global
 # fi
 # ln -sf $pwd/hammerspoon_init.lua $HOME/.hammerspoon/init.lua
 
-# if [ ! -d $HOME/.config/alacritty ]; then
-#     mkdir -p $HOME/.config/alacritty
-# fi
-# ln -sf $pwd/.config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+if [ ! -d $HOME/.config/alacritty ]; then
+    mkdir -p $HOME/.config/alacritty
+fi
+ln -sf $pwd/.config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
 if [ -e $HOME/.config/fish/config.fish ] ; then
     rm -fr $HOME/.config/fish/config.fish
