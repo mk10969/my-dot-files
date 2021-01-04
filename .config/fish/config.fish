@@ -9,7 +9,8 @@ set -x GOPATH $HOME/.go
 set -x PATH $GOPATH/bin $PATH
 # gradle
 set -x PATH /opt/gradle/bin $PATH
-
+# flutter
+set -x PATH $HOME/ghq/github.com/flutter/flutter/bin $PATH
 
 ### alias
 alias ll='exa -aal --git'
@@ -18,7 +19,7 @@ alias lta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less
 # alias mode='~/.scripts/terminal_mode.sh'
 
 
-# ### theme
+### theme
 starship init fish | source
 
 
