@@ -29,8 +29,11 @@ if [ -e $HOME/.config/fish/config.fish ] ; then
     rm -fr $HOME/.config/fish/config.fish
 fi
 ln -sf $pwd/.config/fish/config.fish $HOME/.config/fish/config.fish
+ln -sf $pwd/.config/fish/conf.d/000-env.fish $HOME/.config/fish/conf.d/000-env.fish
+ln -sf $pwd/.config/fish/conf.d/030-aliace.fish $HOME/.config/fish/conf.d/030-aliace.fish
+ln -sf $pwd/.config/fish/conf.d/050-tmux.fish $HOME/.config/fish/conf.d/050-tmux.fish
 
-# ln -sfn $pwd/.scripts $HOME/.scripts
+ln -sfn $pwd/.scripts $HOME/.scripts
 
 ln -sf $pwd/.config/iterm2/com.googlecode.iterm2.plist $HOME/.config/iterm2/com.googlecode.iterm2.plist
 

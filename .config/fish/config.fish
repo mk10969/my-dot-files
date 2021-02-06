@@ -1,51 +1,5 @@
-### env path
-
-# homebrew
-set -x PATH /opt/homebrew/bin $PATH
-# golang arm64 (自前build)
-set -x PATH $HOME/.packages/go-darwin-arm64-bootstrap/bin $PATH
-set -x GOPATH $HOME/.go
-set -x PATH $GOPATH/bin $PATH
-# python3.9
-set -x PATH /opt/homebrew/opt/python@3.9/libexec/bin $PATH
-
-# gradle
-set -x PATH /opt/gradle/bin $PATH
-# flutter
-set -x PATH $HOME/ghq/github.com/flutter/flutter/bin $PATH
-
-
-### alias
-alias ll='exa -aal --git'
-alias lt='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
-alias lta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
-# alias mode='~/.scripts/terminal_mode.sh'
-
-
 ### theme
 starship init fish | source
-
-
-# ### function
-# function attach_tmux_session_if_needed
-#     set ID (tmux list-sessions)
-#     if test -z "$ID"
-#         tmux new-session
-#         return
-#     end
-
-#     set new_session "Create New Session"
-#     set ID (echo $ID\n$new_session | peco --on-cancel=error | cut -d: -f1)
-#     if test "$ID" = "$new_session"
-#         tmux new-session
-#     else if test -n "$ID"
-#         tmux attach-session -t "$ID"
-#     end
-# end
-
-# if test -z $TMUX
-#     attach_tmux_session_if_needed
-# end
 
 ### initialize
 anyenv init - fish | source
