@@ -13,7 +13,7 @@ echo "Setup create symlink..."
 echo "=================================================="
 ln -sf $pwd/gitconfig $HOME/.gitconfig
 ln -sf $pwd/gitignore_global $HOME/.gitignore_global
-#ln -sf $pwd/tmux.conf $HOME/.tmux.conf
+ln -sf $pwd/tmux.conf $HOME/.tmux.conf
 
 # if [ ! -d $HOME/.hammerspoon ]; then
 #     mkdir -p $HOME/.hammerspoon
@@ -32,6 +32,8 @@ ln -sf $pwd/.config/fish/config.fish $HOME/.config/fish/config.fish
 ln -sf $pwd/.config/fish/conf.d/000-env.fish $HOME/.config/fish/conf.d/000-env.fish
 ln -sf $pwd/.config/fish/conf.d/030-aliace.fish $HOME/.config/fish/conf.d/030-aliace.fish
 ln -sf $pwd/.config/fish/conf.d/050-tmux.fish $HOME/.config/fish/conf.d/050-tmux.fish
+ln -sf $pwd/.config/fish/functions/tmuxpopup.fish $HOME/.config/fish/functions/tmuxpopup.fish
+
 
 ln -sfn $pwd/.scripts $HOME/.scripts
 
