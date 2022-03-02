@@ -1,9 +1,64 @@
 # my-dot-files
 
-1. xcode install
+## Installation
 
-2. brew packages install
+### xcode (mac only)
+```
+$ xcode-select --install
+```
 
-3. create symlink
+### homebrew
+```
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+```
+$ eval "$(/opt/homebrew/bin/brew shellenv)"
+```
 
-4. other packages install
+[option]
+```
+$ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+```
+or
+```
+$ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile
+```
+
+
+### homebrew packages
+```
+$ brew tap Homebrew/bundle
+$ brew bundle
+```
+
+### change fish shell
+```
+$ which fish | sudo tee -a /etc/shells
+
+Password:
+/opt/homebrew/bin/fish
+```
+```
+$ chsh -s /opt/homebrew/bin/fish
+```
+
+### create link
+```
+just link
+```
+```
+exec $SHELL -l
+```
+
+### fish plugin manager ([fisher](https://github.com/jorgebucaran/fisher))
+```
+$ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+```
+
+install fish-ghq ([fish-ghq](https://github.com/decors/fish-ghq))
+```
+$ fisher install decors/fish-ghq
+```
+
+
+tar -czvf my-dot-file.tgz .gitignore .config Brewfile gitconfig gitignore_global justfile README.md
