@@ -59,6 +59,3 @@ install fish-ghq ([fish-ghq](https://github.com/decors/fish-ghq))
 ```
 $ fisher install decors/fish-ghq
 ```
-
-
-tar -czvf my-dot-file.tgz .gitignore .config Brewfile gitconfig gitignore_global justfile README.md
