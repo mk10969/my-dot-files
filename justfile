@@ -38,15 +38,9 @@ xcode:
 brew-version:
     brew --version
 
-# brew packages
+# brew packages install
 brew-pkg: brew-version
-    brew tap Homebrew/bundle
     brew bundle
-
-# wezterm terminal
-wezterm-install: brew-version
-    brew tap wez/wezterm
-    brew install --cask wez/wezterm/wezterm
 
 
 ##### rust ######
@@ -126,5 +120,3 @@ iterm2-link:
         mkdir -p {{ home }}/.config/iterm2; \
     fi
     ln -sf {{ pwd }}/.config/iterm2/com.googlecode.iterm2.plist {{ home }}/.config/iterm2/com.googlecode.iterm2.plist
-
-

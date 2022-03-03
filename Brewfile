@@ -1,11 +1,14 @@
-Brewfilecask_args appdir: "/Applications"
+### taps
+tap "homebrew/bundle"
+tap "homebrew/core"
 
-## commands
+### packages
 brew "fish"
 brew "starship"
 brew "just"
 brew "git"
 brew "ghq"
+brew "gcc"
 brew "fzf"
 brew "anyenv"
 brew "direnv"
@@ -28,17 +31,26 @@ brew "kustomize"
 brew "t-rec"
 
 
+### macOS only
+if OS.mac?
+    ### config
+    Brewfilecask_args appdir: "/Applications"
 
-## Applications
-cask 'alfred'
-cask 'spectacle'
-cask 'coteditor'
-cask 'docker'
-cask 'visual-studio-code'
-cask 'vivaldi'
-cask 'appcleaner'
-cask 'iterm2'
+    ### taps
+    tap "homebrew/cask"
+    tap "wez/wezterm"
 
-# cask 'hammerspoon'
-# cask 'bettertouchtool'
-# cask 'mockoon'
+    ### macOS applications
+    cask 'alfred'
+    cask 'spectacle'
+    cask 'coteditor'
+    cask 'docker'
+    cask 'visual-studio-code'
+    cask 'vivaldi'
+    cask 'appcleaner'
+    cask 'iterm2'
+    cask 'wezterm'
+    # cask 'hammerspoon'
+    # cask 'bettertouchtool'
+    # cask 'mockoon'
+end

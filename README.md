@@ -11,25 +11,25 @@ $ xcode-select --install
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+
+- case mac
 ```
 $ eval "$(/opt/homebrew/bin/brew shellenv)"
-```
-
-[option]
-```
 $ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 ```
-or
+
+- case wsl2
 ```
-$ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile
+$ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+$ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.profile
 ```
 
 
 ### homebrew packages
 ```
-$ brew tap Homebrew/bundle
 $ brew bundle
 ```
+
 
 ### change fish shell
 ```
@@ -48,6 +48,11 @@ just link
 ```
 ```
 exec $SHELL -l
+```
+
+### anyenv init
+```
+anyenv install --init
 ```
 
 ### fish plugin manager ([fisher](https://github.com/jorgebucaran/fisher))
