@@ -66,10 +66,20 @@ cargo-pkg: rust-version
     cargo install xsv
     cargo install tv-cli
     cargo install clipivot
+    cargo install cross
+    cargo install du-dust
     cargo install wasm-pack
     cargo install wasmtime-cli
+    cargo install wasm-bindgen-cli
+    cargo install witx-codegen
     cargo install zellij
 
+cargo-update:
+    rustup update
+    @echo "======= check version! ======= "
+    cargo --version
+    rustc --version
+    rustdoc --version
 
 ##### anyenv package management #####
 # anyenv version
