@@ -25,7 +25,7 @@ brew "kustomize"
 brew "nkf"
 brew "pulumi"
 brew "solidity"
-brew "speedtest-cli"
+brew "speedtest"
 brew "ssh-copy-id"
 brew "starship"
 brew "t-rec"
@@ -38,7 +38,7 @@ brew "yq"
 ### macOS only
 if OS.mac?
     ### config
-    Brewfilecask_args appdir: "/Applications"
+    cask_args appdir: "/Applications"
 
     ### taps
     tap "homebrew/cask"
@@ -55,7 +55,7 @@ if OS.mac?
     cask "appcleaner"
     cask "iterm2"
     cask "wezterm"
-    cast "raspberry-pi-imager"
+    cask "raspberry-pi-imager"
     # cask "hammerspoon"
     # cask "bettertouchtool"
     # cask "mockoon"

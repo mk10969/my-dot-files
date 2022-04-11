@@ -24,3 +24,5 @@ docs/site/
 Manifest.toml
 
 *.tgz
+
+Brewfile.lock.json
