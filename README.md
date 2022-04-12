@@ -44,15 +44,10 @@ $ chsh -s /opt/homebrew/bin/fish
 
 ### create link
 ```
-just link
+$ just link
 ```
 ```
-exec $SHELL -l
-```
-
-### anyenv init
-```
-anyenv install --init
+$ exec $SHELL -l
 ```
 
 ### fish plugin manager ([fisher](https://github.com/jorgebucaran/fisher))
@@ -60,7 +55,22 @@ anyenv install --init
 $ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ```
 
-install fish-ghq ([fish-ghq](https://github.com/decors/fish-ghq))
+### install fish-ghq ([fish-ghq](https://github.com/decors/fish-ghq))
 ```
 $ fisher install decors/fish-ghq
+```
+
+### anyenv init
+```
+$ anyenv install --init
+```
+
+### anyenv plugins install
+```
+$ just anyenv-plugins
+```
+
+### anyenv packages install
+```
+$ just anyenv-pkg
 ```

@@ -5,7 +5,6 @@ tap "homebrew/core"
 ### packages
 brew "anyenv"
 brew "bat"
-brew "bpytop"
 brew "direnv"
 brew "ethereum"
 brew "exa"

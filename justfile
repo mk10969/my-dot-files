@@ -18,13 +18,14 @@ home            := env_var("HOME")
 #####################
 ##### commands ######
 #####################
-
+# test variables
 test:
     @echo {{ pwd }}
     @echo {{ home }}
     @echo {{ env_var("HOME") }}
 
 
+##### MacOS only #####
 # xcode install
 xcode:
     if [ "Darwin" == `uname` ]; then \
@@ -74,12 +75,14 @@ cargo-pkg: rust-version
     cargo install witx-codegen
     cargo install zellij
 
+# cargo update all
 cargo-update:
     rustup update
     @echo "======= check version! ======= "
     cargo --version
     rustc --version
     rustdoc --version
+
 
 ##### anyenv package management #####
 # anyenv version
@@ -91,20 +94,25 @@ anyenv-pkg: anyenv-version
     anyenv install nodenv
     anyenv install jenv
     anyenv install goenv
-    anyenv install jlenv
     anyenv install pyenv
+    anyenv install rbenv
+    anyenv install jlenv
+
+# anyenv plugin install
+anyenv-plugin: anyenv-version
+    if [ ! -d {{ home }}/.anyenv/plugins ] ; then \
+        echo 'create directory.'; \
+        mkdir -p ~/.anyenv/plugins; \
+    fi
+    git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
+
+# anyenv update all
+anyenv-update:
+    anyenv update
 
 
-##### fish  #####
-# set fish universal variables
-fish-val:
-    #!/usr/bin/env fish
-    set -Ux fish_user_paths /usr/local/bin $fish_user_paths
-    set -Ux fish_user_paths /usr/local/sbin $fish_user_paths
-    set -Ux fish_user_paths $HOME/.cargo/bin $fish_user_paths
-
-
-##### symbolic link (https://github.com/casey/just#if-statements) #####
+##### symbolic link #####
+# https://github.com/casey/just#if-statements
 # create all link
 link: git-link fish-link iterm2-link
 
