@@ -74,3 +74,10 @@ $ just anyenv-plugins
 ```
 $ just anyenv-pkg
 ```
+
+### bug ?
+```
+$ jenv enable-plugin export
+```
+これを実行し、shellの再起動後に、jenvのパスが標準出力され続ける。（ちょっとよくわからない）
+JAVA_HOMEの設定がenableになるだけなので、一旦設定は無効にしておく。
