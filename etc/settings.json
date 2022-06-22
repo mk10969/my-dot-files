@@ -1,0 +1,96 @@
+{
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.snippetSuggestions": "none",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "[javascript]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  // （Python 拡張をインストールして pip install black しておく）
+  "python.formatting.provider": "autopep8",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.tabSize": 4
+  },
+  "[json]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.checkOnSave.extraArgs": [
+    "--",
+    "-A",
+    "clippy::needless_return"
+  ],
+  "editor.columnSelection": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "Monaco",
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.hover.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.trimAutoWhitespace": false,
+  "extensions.ignoreRecommendations": false,
+  "files.trimTrailingWhitespace": true,
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.statusBar.visible": true,
+  "json.maxItemsComputed": 10000,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "yaml.customTags": ["!encrypted/pkcs1-oaep scalar", "!vault scalar"],
+  "redhat.telemetry.enabled": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "js/ts.implicitProjectConfig.strictNullChecks": true,
+  "files.associations": {
+    "justfile": "just"
+  },
+  "tailwindCSS.experimental.classRegex": [],
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": true,
+    "typescriptreact": false
+  },
+  "cmake.configureOnOpen": true,
+  "http.systemCertificates": false,
+  "workbench.colorCustomizations": {},
+  "editor.inlineSuggest.enabled": true
+}
