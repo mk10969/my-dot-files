@@ -5,3 +5,5 @@ alias lta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less
 
 # use GNU-sed
 alias sed='gsed'
+# diff with color
+alias diff='colordiff'

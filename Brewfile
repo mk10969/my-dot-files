@@ -5,6 +5,7 @@ tap "homebrew/core"
 ### packages
 brew "anyenv"
 brew "bat"
+brew "colordiff"
 brew "direnv"
 brew "exa"
 brew "fish"
