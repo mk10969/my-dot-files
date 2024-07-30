@@ -7,3 +7,5 @@ alias lta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less
 alias sed='gsed'
 # diff with color
 alias diff='colordiff'
+
+alias date='gdate'
